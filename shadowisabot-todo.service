@@ -1,0 +1,22 @@
+[Unit]
+Description=Shadowisabot public to-do list
+After=network.target
+
+[Service]
+Type=simple
+User=shadowtodo
+Group=shadowtodo
+WorkingDirectory=/opt/shadowisabot-todo
+EnvironmentFile=/etc/shadowisabot-todo.env
+ExecStart=/usr/bin/node /opt/shadowisabot-todo/server.js
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/shadowisabot-todo
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
