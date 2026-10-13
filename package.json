@@ -1,0 +1,20 @@
+{
+  "name": "shadowisabot-todo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Public read-only task board with password-protected admin editing",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "express-session": "^1.18.1",
+    "helmet": "^8.0.0"
+  }
+}
